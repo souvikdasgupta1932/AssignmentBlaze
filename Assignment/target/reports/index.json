@@ -1,0 +1,253 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1673060900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the home page",
+            "match": {
+              "location": "HomePageSD.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 13251980300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.inputs()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Book flight and verify",
+        "description": "",
+        "id": "flight-booking;book-flight-and-verify",
+        "after": [
+          {
+            "result": {
+              "duration": 759190000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 128942000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user selects \"departureCity\" place as \"Paris\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "departureCity",
+                  "offset": 18
+                },
+                {
+                  "val": "Paris",
+                  "offset": 43
+                }
+              ],
+              "location": "HomePageSD.the_user_selects_place_as(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 149884200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user selects \"destinationCity\" place as \"Rome\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "destinationCity",
+                  "offset": 18
+                },
+                {
+                  "val": "Rome",
+                  "offset": 45
+                }
+              ],
+              "location": "HomePageSD.the_user_selects_place_as(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5543662600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user clicks on \"Find Flights\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Find Flights",
+                  "offset": 20
+                }
+              ],
+              "location": "HomePageSD.the_user_clicks_on_button(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 654862600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects flight \"Virgin America\" and No \"43\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Virgin America",
+                  "offset": 25
+                },
+                {
+                  "val": "43",
+                  "offset": 49
+                }
+              ],
+              "location": "FlightSelectionSD.the_user_selects_flight_and_No(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 110410200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "verify the flight is reserved",
+            "match": {
+              "location": "FlightSelectionSD.verify_the_flight_is_reserved()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1061337500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user fills in the purchase details",
+            "match": {
+              "location": "FlightReservationSD.user_fills_in_the_purchase_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Address",
+                  "City",
+                  "State",
+                  "Zip Code",
+                  "Card Type",
+                  "Credit Card Number",
+                  "Month",
+                  "Year",
+                  "Name on Card"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Souvik",
+                  "Pune",
+                  "Pune",
+                  "Maharashtra",
+                  "412207",
+                  "Visa",
+                  "1234567890",
+                  "11",
+                  "2017",
+                  "Souvik"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1404816500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks on \"Purchase Flight\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Purchase Flight",
+                  "offset": 20
+                }
+              ],
+              "location": "HomePageSD.the_user_clicks_on_button(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63502200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user verify ID is generated",
+            "match": {
+              "location": "FlightReservationConfirmationSD.the_user_verify_ID_is_generated()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 45496200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user verify Status is generated",
+            "match": {
+              "location": "FlightReservationConfirmationSD.the_user_verify_Status_is_generated()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Flight Booking",
+    "description": "",
+    "id": "flight-booking",
+    "keyword": "Feature",
+    "uri": "BookFlight.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Test"
+      }
+    ]
+  }
+]

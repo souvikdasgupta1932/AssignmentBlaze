@@ -1,0 +1,228 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.known {background-color:goldenrod;font-weight:bold;color:darkred}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+.comment {font-family:courier;font-weight:normal;font-size:small;color:black;border:1px dashed black;background-color:silver}
+.tip {font-family:courier;font-weight:normal;font-size:small;color:white;background-color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: auto;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+</style>
+<title>Detailed Results Report</title>
+<meta charset="UTF-8" />
+</head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+<h1>Overview</h1>
+
+
+<table>
+	<tr><th></th><th>Passed</th><th>Failed</th><th>Known</th><th>Undefined</th><th>Total</th><th>%Passed</th></tr>
+	<tr><th>Features</th>
+		<td class="passed" id="features_passed">1</td>
+		<td class="failed" id="features_failed">0</td>
+		<td class="known" id="features_known">0</td>
+		<td class="undefined" id="features_undefined">0</td>
+		<td id="features_total">1</td>
+		<td id="features_rate">
+				100%
+		</td>
+	</tr>
+	<tr><th>Scenarios</th>
+		<td class="passed" id="scenarios_passed">1</td>
+		<td class="failed" id="scenarios_failed">0</td>
+		<td class="known" id="scenarios_known">0</td>
+		<td class="undefined" id="scenarios_undefined">0</td>
+		<td id="scenarios_total">1</td>
+		<td id="scenarios_rate">
+				100%
+		</td>
+	</tr>
+	<tr><th>Steps</th>
+		<td class="passed" id="steps_passed">10</td>
+		<td class="failed" id="steps_failed">0</td>
+		<td class="known" id="steps_known">0</td>
+		<td class="undefined" id="steps_undefined">0</td>
+		<td id="steps_total">10</td>
+		<td id="steps_rate">
+				100%
+		</td>
+	</tr>
+</table>
+<div><b>Overall Duration: 0h 00m 24s</b></div>
+
+<a id="top"></a><h1>Table of Contents</h1>
+
+<ol>
+<li> <span class="passed"><a href="#feature-2flight-booking">Flight Booking</a></span>
+	<ol>
+        <li> <span class="passed"><a href="#sc-7-flight-booking;book-flight-and-verify">Book flight and verify</a></span></li>
+    </ol></li>
+</ol>
+
+<h1>Detailed Results Report</h1>
+
+<table width="700px">
+	<tr class="passed"><td colspan="4"><b>Feature:</b> <a id="feature-2flight-booking">Flight Booking</a></td></tr>
+    <tr class="passed">
+    	<td><small><b>Passed:</b> 1</small></td>
+        <td><small><b>Failed:</b> 0</small></td>
+        <td><small><b>Undefined:</b> 0</small></td>
+        <td><small>Duration: 24.84s</small></td>
+    </tr>
+	<tr class="passed">
+		<td colspan="4" style="padding-left:20px">
+		<table width="100%">
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-7-flight-booking;book-flight-and-verify">Book flight and verify</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 10</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 24.84s</small></td>
+				</tr>
+					<tr class="passed">
+						<td>Before</td>
+						<td colspan="2"></td>
+						<td width="100">13.25s</td>
+					</tr>
+                	<tr class="passed">
+                		<td colspan="4">
+                		</td>
+                	</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>Given </b> user is on the home page</td>
+                            		<td width="100">1.67s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user selects &quot;departureCity&quot; place as &quot;Paris&quot;</td>
+                            		<td width="100">0.13s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user selects &quot;destinationCity&quot; place as &quot;Rome&quot;</td>
+                            		<td width="100">0.15s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user clicks on &quot;Find Flights&quot; button</td>
+                            		<td width="100">5.54s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user selects flight &quot;Virgin America&quot; and No &quot;43&quot;</td>
+                            		<td width="100">0.65s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> verify the flight is reserved</td>
+                            		<td width="100">0.11s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> user fills in the purchase details</td>
+                            		<td width="100">1.06s</td>
+                        		</tr>
+	 								<tr class="passed">
+	 									<td style="padding-left:20px" colspan="2">
+	 										<table>
+	 											<tr>
+	 													<td>Name</td>
+	 													<td>Address</td>
+	 													<td>City</td>
+	 													<td>State</td>
+	 													<td>Zip Code</td>
+	 													<td>Card Type</td>
+	 													<td>Credit Card Number</td>
+	 													<td>Month</td>
+	 													<td>Year</td>
+	 													<td>Name on Card</td>
+												</tr>
+	 											<tr>
+	 													<td>Souvik</td>
+	 													<td>Pune</td>
+	 													<td>Pune</td>
+	 													<td>Maharashtra</td>
+	 													<td>412207</td>
+	 													<td>Visa</td>
+	 													<td>1234567890</td>
+	 													<td>11</td>
+	 													<td>2017</td>
+	 													<td>Souvik</td>
+												</tr>
+            								</table>
+        								</td>
+    								</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user clicks on &quot;Purchase Flight&quot; button</td>
+                            		<td width="100">1.40s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user verify ID is generated</td>
+                            		<td width="100">0.06s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user verify Status is generated</td>
+                            		<td width="100">0.05s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+					<tr class="passed">
+						<td>After</td>
+						<td colspan="2"></td>
+						<td width="100">0.76s</td>
+					</tr>
+                	<tr class="passed">
+                		<td colspan="4">
+						</td>
+                	</tr>
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+		</table>
+	</td></tr><tr><td colspan="5"></td></tr>
+</table>
+
+	</body>
+</html>
